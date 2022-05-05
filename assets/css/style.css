@@ -1,0 +1,21 @@
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s ease;
+  padding: 10px;
+  color: inherit;
+  border-radius: 10px;
+  box-shadow: 0px 0px 11px #000000;
+}
+
+[data-tooltip]:hover:before {
+  opacity: 1;
+  background: yellow;
+  margin-top: -50px;
+  margin-left: 15px;    
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+  pointer-events: none;
+}
